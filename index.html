@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Jenifer ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.contenedor {
+    max-width: 600px;
+    padding: 30px;
+    background: rgba(0,0,0,0.25);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.corazon {
+    font-size: 40px;
+    animation: latir 1s infinite;
+    margin-top: 15px;
+}
+
+@keyframes latir {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+button {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    background: white;
+    color: #ff4f87;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.mensaje-oculto {
+    margin-top: 20px;
+    font-size: 1.3em;
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h1>Para vos, Jenifer ❤️</h1>
+
+<p>
+Desde que llegaste a mi vida, todo cambió.  
+Los días tienen más luz, las noches más calma y mi corazón un motivo más fuerte para latir.  
+
+No sos solo alguien especial…  
+sos la persona que quiero abrazar cuando todo está bien  
+y también cuando todo está mal.  
+
+Gracias por existir, por sonreír, por estar.  
+Sos lo mejor que me pasó en la vida.
+</p>
+
+<div class="corazon">❤️</div>
+
+<button onclick="mostrarMensaje()">Tocar mi corazón</button>
+
+<div class="mensaje-oculto" id="mensaje">
+TE AMO MUCHÍSIMO 💖
+</div>
+
+</div>
+
+<script>
+function mostrarMensaje() {
+    document.getElementById("mensaje").style.display = "block";
+}
+</script>
+
+</body>
+</html>
