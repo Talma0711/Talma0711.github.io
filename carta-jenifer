@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Para Jenifer ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#ff9ecb,#ffd6ea,#ffc3e6);
+overflow:hidden;
+}
+
+/* corazones flotando */
+.heart{
+position:fixed;
+color:rgba(255,255,255,0.25);
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh) scale(0.5);opacity:0;}
+50%{opacity:1;}
+100%{transform:translateY(-10vh) scale(1.3);opacity:0;}
+}
+
+/* caja carta */
+.carta{
+position:relative;
+max-width:750px;
+margin:70px auto;
+background:rgba(255,255,255,0.9);
+padding:45px;
+border-radius:25px;
+box-shadow:0 15px 45px rgba(0,0,0,0.25);
+animation:aparecer 2s ease;
+}
+
+/* corazon gigante fondo */
+.carta::before{
+content:"❤";
+position:absolute;
+font-size:350px;
+color:rgba(255,105,180,0.08);
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+@keyframes aparecer{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* titulo latido */
+h1{
+text-align:center;
+color:#ff2e86;
+animation:latido 1.5s infinite;
+}
+
+@keyframes latido{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.05);}
+}
+
+p{
+line-height:1.9;
+font-size:18px;
+}
+
+/* boton */
+.boton{
+display:block;
+margin:35px auto;
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:15px;
+background:#ff2e86;
+color:white;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.boton:hover{
+background:#ff0f74;
+}
+
+.oculto{
+display:none;
+text-align:center;
+font-size:22px;
+color:#ff2e86;
+margin-top:20px;
+animation:aparecer 1.5s ease;
+}
+
+/* brillo suave */
+body::after{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:radial-gradient(circle,rgba(255,255,255,0.4),transparent 70%);
+pointer-events:none;
+animation:brillo 6s infinite alternate;
+}
+
+@keyframes brillo{
+from{opacity:0.3;}
+to{opacity:0.6;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MUSICA -->
+<audio autoplay loop>
+<source src="https://cdn.pixabay.com/audio/2022/03/15/audio_c8c8a73467.mp3">
+</audio>
+
+<!-- corazones -->
+<script>
+for(let i=0;i<25;i++){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+heart.style.fontSize=(25+Math.random()*60)+"px";
+document.body.appendChild(heart);
+}
+</script>
+
+<div class="carta">
+
+<h1>Para Jenifer ❤️</h1>
+
+<p>
+Jenifer…<br><br>
+
+No sé si existe algo en este mundo capaz de explicar lo que siento por vos…  
+porque lo que vive en mi corazón cuando pienso en vos es más grande que cualquier palabra.
+</p>
+
+<p>
+Tal vez hoy estamos pasando momentos difíciles…  
+tal vez el camino no es perfecto…  
+pero hay algo que nunca cambió ni va a cambiar:
+</p>
+
+<p><b>Mi amor por vos.</b></p>
+
+<p>
+Te amo en la calma…  
+te amo en el caos…  
+te amo cuando reís…  
+y te amo incluso cuando el silencio duele.
+</p>
+
+<p>
+Porque vos no sos solo alguien en mi vida…  
+sos alguien que marcó mi alma…  
+sos alguien que vive en mis recuerdos…  
+sos alguien que cambió mi mundo para siempre.
+</p>
+
+<p>
+No importa qué pase…  
+no importa qué diga el tiempo…  
+no importa cuántas tormentas vengan…  
+yo te voy a amar igual.
+</p>
+
+<p>
+Porque mi amor por vos no depende de circunstancias…  
+depende de lo que sos…  
+de lo que significás…  
+de lo que mi corazón eligió para siempre.
+</p>
+
+<p>
+Si alguna vez dudas…  
+si alguna vez sentís miedo…  
+si alguna vez no sabés qué siento…
+</p>
+
+<p>
+Volvé acá…  
+leé esto…  
+y recordá que cada palabra nació desde lo más profundo de mi alma.
+</p>
+
+<button class="boton" onclick="mostrar()">Tocame ❤️</button>
+
+<div id="mensaje" class="oculto">
+TE AMO MÁS DE LO QUE LAS PALABRAS PUEDEN EXPLICAR 💖
+</div>
+
+<p style="text-align:center;font-size:24px;margin-top:30px;">
+Para siempre tuyo ❤️
+</p>
+
+</div>
+
+<script>
+function mostrar(){
+document.getElementById("mensaje").style.display="block";
+}
+</script>
+
+</body>
+</html>
